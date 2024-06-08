@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{% block titulo %}{% endblock %}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <a href="{%url 'Principal'%}">Home</a>
+    <a href="{%url 'Contacto'%}">/ Contactanos</a>
+    {% block contenido %}
+    <!--Crearemos un contenido aqui-->
+    {% endblock %}
+
+    <script src="" async defer></script>
+  </body>
+</html>
