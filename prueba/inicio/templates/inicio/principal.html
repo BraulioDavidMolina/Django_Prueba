@@ -1,11 +1,12 @@
 {% extends 'inicio/encabezado.html' %} 
-
-{% block titulo %}
-  PRINCIPAL
-{% endblock %}
-
+{% block titulo %}PRINCIPAL{% endblock titulo%} 
+{% block imagen %}
+  {% load static %} 
+  {% static 'inicio/images/home.png' %}
+{% endblock imagen%} 
+{% block carrera %}Principal{% endblock carrera%}
+{% block tema %}Principal{% endblock tema%}
+{% block subtitulo %}Alumnos{% endblock subtitulo %}
 {% block contenido %}
-  <center>
-    <h1>Hola Django</h1>
-  </center>
-{% endblock %}
+
+{% endblock contenido%}

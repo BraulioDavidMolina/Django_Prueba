@@ -1,0 +1,15 @@
+{% extends 'inicio/encabezado.html' %} {% block titulo %} Prueba {% endblock %}
+{% block imagen %} {% load static %} {% static 'inicio/images/registrar.png' %}
+{% endblock %} {% block carrera %} Prueba {% endblock %} {% block contenido %}
+<!-- Encabezdo -->
+<div class="page-header">
+  <div class="page-title">
+    <h3>Prueba <small>Ingresa tu información</small></h3>
+  </div>
+</div>
+
+<div class="form">
+  <label for="text">Text</label>
+  <input type="text" />
+</div>
+{% endblock %}

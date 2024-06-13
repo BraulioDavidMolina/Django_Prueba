@@ -6,3 +6,9 @@ def principal(request):
 
 def contacto(request):
     return render(request, "inicio/contacto.html")
+
+def registro(request):
+    return render(request, "inicio/registro.html")
+
+def ejemplo(request):
+    return render(request, "inicio/ejemplo.html")
