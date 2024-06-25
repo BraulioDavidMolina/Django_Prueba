@@ -17,11 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from inicio import views
+from registros import views as views_registros
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.principal, name="Principal"),
+    path('',views_registros.registros, name="Principal"),
     path('contacto/',views.contacto, name="Contacto"),
     path('registro/',views.registro, name="Registro"),
     path('ejemplo/',views.ejemplo, name="Ejemplo"),
+    
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
