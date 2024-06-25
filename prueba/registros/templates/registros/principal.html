@@ -1,0 +1,39 @@
+{% extends 'inicio/encabezado.html' %} 
+{% block titulo %}PRINCIPAL{% endblock titulo%} 
+{% block imagen %}
+  {% load static %} 
+  {% static 'inicio/images/home.png' %}
+{% endblock imagen%} 
+{% block carrera %}Principal{% endblock carrera%}
+{% block tema %}Principal{% endblock tema%}
+{% block subtitulo %}Alumnos{% endblock subtitulo %}
+
+{% block contenido %}
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th class="muted">Foto</th>
+      <th class="muted">Matricula</th>
+      <th class="muted">Nombre</th>
+      <th class="muted">Carrera</th>
+      <th class="muted">Turno</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for alumno in alumnos %}
+      <tr>
+        <td class="text-center">
+          <img src="{{alumno.imagen.url}}" alt="" class="img-media">
+        </td>
+        <th class="muted">{{alumno.matricula}}</th>
+        <th class="muted">{{alumno.nombre}}</th>
+        <th class="muted">{{alumno.carrera}}</th>
+        <th class="muted">{{alumno.turno}}</th>
+      </tr>
+      {%endfor%}
+  </tbody>
+  
+</table>
+
+
+{% endblock contenido%}
