@@ -1,0 +1,42 @@
+{% extends 'inicio/encabezado.html' %} 
+{% block titulo %}COMENTARIOS{% endblock titulo%} 
+{% block imagen %}
+  {% load static %} 
+  {% static 'inicio/images/home.png' %}
+{% endblock imagen%} 
+{% block carrera %}COMENTARIOS{% endblock carrera%}
+{% block tema %}Comentarios{% endblock tema%}
+{% block subtitulo %}Comentarios realizados{% endblock subtitulo %}
+
+{% block contenido %}
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th class="muted">Usuario</th>
+      <th class="muted">Mensaje</th>
+      <th class="muted">+</th>
+      <th class="muted">+</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for comentario in comentarios %}
+      <tr>
+        {% comment %} <td class="text-center">
+          <img src="{{alumno.imagen.url}}" alt="" class="img-media">
+        </td> {% endcomment %}
+        <th class="muted">{{comentario.usuario}}</th>
+        <th class="muted">{{comentario.mensaje}}</th>
+        <th class="muted">
+          <a href="{%url 'Editar' comentario.id%}">Editar</a>
+        </th>
+        <th class="muted">
+          <a href="{%url 'Eliminar' comentario.id%}">Eliminar</a>
+        </th>
+      </tr>
+      {%endfor%}
+  </tbody>
+  
+</table>
+
+
+{% endblock contenido%}

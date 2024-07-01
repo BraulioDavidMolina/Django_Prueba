@@ -28,7 +28,10 @@ urlpatterns = [
     path('registro/',views.registro, name="Registro"),
     path('ejemplo/',views.ejemplo, name="Ejemplo"),
     path('registrar/', views_registros.registrar, name="Registrar"),
-    #path('registrar/',views_registros.registrar, name="Registrar"),
+    path('comentarios/', views_registros.comentarios, name="Comentarios"),
+    path('eliminarComentario/<int:id>/', views_registros.eliminarComentarioContacto, name='Eliminar'),
+    path('editarComentario/<int:id>/', views_registros.editarComentarioContacto, name='Editar'),
+    path('guardarComentario/<int:id>/', views_registros.guardarComentarioContacto, name='Guardar'),
     
 ]
 
